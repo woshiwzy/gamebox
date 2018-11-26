@@ -33,13 +33,14 @@ android {
 
 dependencies {
     implementation rootProject.ext.dependencies.andserverApi
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     annotationProcessor rootProject.ext.dependencies.andserverProcessor
-
     implementation rootProject.ext.dependencies.design
     implementation rootProject.ext.dependencies.appCompat
     implementation rootProject.ext.dependencies.loading
-
     implementation rootProject.ext.dependencies.json
     implementation rootProject.ext.dependencies.commonsLang
     implementation rootProject.ext.dependencies.commonsCollections
+    implementation project(':model_cretve')
+    implementation 'com.github.lzyzsd:jsbridge:1.0.4'
 }

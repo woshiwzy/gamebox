@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,7 +16,7 @@
             android:layout_height="?actionBarSize"
             android:background="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|enterAlways|snap"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     </android.support.design.widget.AppBarLayout>
 
@@ -32,28 +31,35 @@
             android:id="@+id/btn_start"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/start_server"/>
+            android:text="@string/start_server" />
 
         <Button
             android:id="@+id/btn_stop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/stop_server"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/btn_browse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/start_browse"
-            android:visibility="gone"/>
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/buttonGameList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="游戏列表"
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/tv_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp_15"
-            android:text="@string/server_stop_succeed"/>
+            android:text="@string/server_stop_succeed" />
     </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>

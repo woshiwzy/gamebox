@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.common.util.Tool;
 import com.yanzhenjie.andserver.sample.R;
 import com.yanzhenjie.andserver.sample.ServerManager;
 import com.yanzhenjie.loading.dialog.LoadingDialog;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView mTvMessage;
 
     private LoadingDialog mDialog;
-    private String mRootUrl;
+    public static String mRootUrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // startServer;
         mBtnStart.performClick();
+
+
+        findViewById(R.id.buttonGameList).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tool.startActivity(MainActivity.this,GameVerticalActivity.class);
+            }
+        });
     }
 
     @Override
