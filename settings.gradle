@@ -1,0 +1,1 @@
+include ':games', ':api', ':annotation', ':processor'

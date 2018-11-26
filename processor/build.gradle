@@ -1,0 +1,16 @@
+apply plugin: rootProject.ext.plugins.javaLibrary
+
+compileJava {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    implementation rootProject.ext.dependencies.andserverAnnotation
+
+    implementation rootProject.ext.dependencies.autoService
+    implementation rootProject.ext.dependencies.javaPoet
+
+    implementation rootProject.ext.dependencies.commonsLang
+    implementation rootProject.ext.dependencies.commonsCollections
+}
