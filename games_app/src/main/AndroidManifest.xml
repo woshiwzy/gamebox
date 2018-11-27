@@ -30,7 +30,9 @@
             android:name=".CoreService"
             android:exported="false" />
 
-        <activity android:name=".activity.GameVerticalActivity"></activity>
+        <activity android:name="com.gamebox.activity.GameVerticalActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.gamebox.activity.GameListActivity" />
+        <activity android:name="com.gamebox.activity.GameHoritalActivity" android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.common.util.Tool;
+import com.gamebox.activity.GameListActivity;
+import com.gamebox.activity.GameVerticalActivity;
 import com.yanzhenjie.andserver.sample.R;
 import com.yanzhenjie.andserver.sample.ServerManager;
 import com.yanzhenjie.loading.dialog.LoadingDialog;
@@ -60,7 +62,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.buttonGameList).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Tool.startActivity(MainActivity.this,GameVerticalActivity.class);
+//                Tool.startActivity(MainActivity.this,GameVerticalActivity.class);
+                Tool.startActivity(MainActivity.this,GameListActivity.class);
             }
         });
     }

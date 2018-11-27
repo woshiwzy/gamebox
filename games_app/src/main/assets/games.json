@@ -1,0 +1,82 @@
+[
+  {
+    "name": "bobo",
+    "en_name": "bobo",
+    "isvertial": true,
+    "path": "games/game_bobo/index.html"
+  },
+  {
+    "name": "car move",
+    "en_name": "car move",
+    "isvertial": true,
+    "path": "games/game_car_moive/index.html"
+  },
+  {
+    "name": "car race",
+    "en_name": "car race",
+    "isvertial": true,
+    "path": "games/game_car_race/index.html"
+  },
+  {
+    "name": "eat gold icon",
+    "en_name": "eat gold icon",
+    "isvertial": false,
+    "path": "games/game_eat_gold_icon/index.html"
+  },
+  {
+    "name": "忍者躲飞镖",
+    "en_name": "ninja",
+    "isvertial": false,
+    "path": "games/game_ninja/index.html"
+  },
+  {
+    "name": "钻石星球",
+    "en_name": "point",
+    "isvertial": true,
+    "path": "games/game_point/index.html"
+  },
+  {
+    "name": "short run",
+    "en_name": "short run",
+    "isvertial": true,
+    "path": "games/game_short_run/index.html"
+  },
+  {
+    "name": "shot away",
+    "en_name": "shot away",
+    "isvertial": false,
+    "path": "games/game_shot_away/index.html"
+  },
+  {
+    "name": "shot ball",
+    "en_name": "shot ball",
+    "isvertial": true,
+    "path": "games/game_shot_ball/index.html"
+  },
+  {
+    "name": "cubic",
+    "en_name": "cubic",
+    "isvertial": false,
+    "path": "games/game_cubic/index.html"
+  },
+  {
+    "name": "cross bar",
+    "en_name": "cross bar",
+    "isvertial": false,
+    "path": "games/game_cross_bar/index.html"
+  },
+  {
+    "name": "bottle",
+    "en_name": "bottle",
+    "isvertial": true,
+    "path": "games/game_bottle/index.html"
+  },
+  {
+    "name": "santaclaus run",
+    "en_name": "santaclaus run",
+    "isvertial": false,
+    "path": "games/game_santaclaus_run/index.html"
+  }
+]
+
+

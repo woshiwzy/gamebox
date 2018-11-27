@@ -43,4 +43,5 @@ dependencies {
     implementation rootProject.ext.dependencies.commonsCollections
     implementation project(':model_cretve')
     implementation 'com.github.lzyzsd:jsbridge:1.0.4'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
 }

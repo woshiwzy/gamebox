@@ -58,7 +58,7 @@ public class AssertTool {
     }
 
     public static ArrayList<String> listAssertFiles(Context context, String root) {
-        ArrayList<String> hset = null;
+        ArrayList<String> hset = new ArrayList<>();
         try {
             AssetManager assertManager = context.getAssets();
             String[] files = assertManager.list(root);
