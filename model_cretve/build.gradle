@@ -1,0 +1,73 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    useLibrary 'org.apache.http.legacy'
+
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+
+
+    ext {
+    configuration = [
+            buildToolsVersion: '28.0.0',
+            compileVersion   : 28,
+            minSdk           : 19,
+            targetSdk        : 22,
+            version_code     : 10,
+            version_name     : "1.0",
+    ]
+
+    libraries = [
+            supportVersion    : "27.0.2",
+            butterknifeVersion: "8.8.1",
+            retrofitVersion   : "2.2.0",
+    ]
+
+    dependencies = [
+            "annotations"               : "com.android.support:support-annotations:${ext.libraries.supportVersion}",
+            "appcompat-v7"              : "com.android.support:appcompat-v7:${ext.libraries.supportVersion}",
+            "butterknife"               : "com.jakewharton:butterknife:${ext.libraries.butterknifeVersion}",
+            "butterknife-apt"           : "com.jakewharton:butterknife-compiler:${ext.libraries.butterknifeVersion}",
+            "recyclerview"              : "com.android.support:recyclerview-v7:${ext.libraries.supportVersion}",
+            "design"                    : "com.android.support:design:${ext.libraries.supportVersion}",
+            "retrofit"                  : "com.squareup.retrofit2:retrofit:${ext.libraries.retrofitVersion}",
+            "retrofit-converter-scalars": "com.squareup.retrofit2:converter-scalars:${ext.libraries.retrofitVersion}",
+            "retrofit2-rxjava2-adapter" : "com.squareup.retrofit2:adapter-rxjava2:${ext.libraries.retrofitVersion}",
+            "logging-interceptor"       : 'com.squareup.okhttp3:logging-interceptor:3.5.0',
+            "rxjava"                    : 'io.reactivex.rxjava2:rxjava:2.0.2',
+            "rxandroid"                 : 'io.reactivex.rxjava2:rxandroid:2.0.1',
+            "gson"                      : 'com.google.code.gson:gson:2.8.0',
+            "fresco"                    : 'com.facebook.fresco:fresco:1.0.0',
+            "nineoldandroids"           : 'com.nineoldandroids:library:2.4.0',
+            "stream"                    : 'com.annimon:stream:1.1.7',
+            "constraint"                : 'com.android.support.constraint:constraint-layout:2.0.0-alpha1',
+            "multidex"                  : 'com.android.support:multidex:1.0.1',
+            "support_v4"                : "com.android.support:support-v4:${ext.libraries.supportVersion}",
+            "design"                    : "com.android.support:design:${ext.libraries.supportVersion}",
+            "butterknife-compiler"      : "com.jakewharton:butterknife-compiler:${ext.libraries.butterknifeVersion}"
+    ]
+}
+
+
+
+    defaultConfig {
+
+        minSdkVersion rootProject.ext.android.sampleMinSdkVersion
+        targetSdkVersion rootProject.ext.android.sampleTargetSdkVersion
+
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api rootProject.ext.dependencies.andserverAnnotation
+}
