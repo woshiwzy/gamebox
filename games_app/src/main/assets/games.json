@@ -1,24 +1,24 @@
 [
   {
-    "name": "bobo",
+    "name": "转到点",
     "en_name": "bobo",
     "isvertial": true,
     "path": "games/game_bobo/index.html"
   },
   {
-    "name": "car move",
+    "name": "来车的颜色",
     "en_name": "car move",
     "isvertial": true,
     "path": "games/game_car_moive/index.html"
   },
   {
-    "name": "car race",
+    "name": "经典赛车",
     "en_name": "car race",
     "isvertial": true,
     "path": "games/game_car_race/index.html"
   },
   {
-    "name": "eat gold icon",
+    "name": "吃金币",
     "en_name": "eat gold icon",
     "isvertial": false,
     "path": "games/game_eat_gold_icon/index.html"
@@ -36,47 +36,66 @@
     "path": "games/game_point/index.html"
   },
   {
-    "name": "short run",
+    "name": "短跑健将",
     "en_name": "short run",
     "isvertial": true,
     "path": "games/game_short_run/index.html"
   },
   {
-    "name": "shot away",
+    "name": "远射",
     "en_name": "shot away",
     "isvertial": false,
     "path": "games/game_shot_away/index.html"
   },
   {
-    "name": "shot ball",
+    "name": "乒乓球",
     "en_name": "shot ball",
     "isvertial": true,
     "path": "games/game_shot_ball/index.html"
   },
   {
-    "name": "cubic",
+    "name": "方块历险记",
     "en_name": "cubic",
     "isvertial": false,
     "path": "games/game_cubic/index.html"
   },
   {
-    "name": "cross bar",
+    "name": "射门框",
     "en_name": "cross bar",
     "isvertial": false,
     "path": "games/game_cross_bar/index.html"
   },
   {
-    "name": "bottle",
+    "name": "放过瓶子",
     "en_name": "bottle",
     "isvertial": true,
     "path": "games/game_bottle/index.html"
   },
   {
-    "name": "santaclaus run",
+    "name": "圣诞老人跑酷",
     "en_name": "santaclaus run",
     "isvertial": false,
     "path": "games/game_santaclaus_run/index.html"
+  },
+  {
+    "name": "方块快跑",
+    "en_name": "supper runner",
+    "isvertial": false,
+    "path": "games/game_super_runner/index.html"
+  },
+  {
+    "name": "跳箱英雄",
+    "en_name": "jump box hero",
+    "isvertial": true,
+    "path": "games/game_jump_box_hero/index.html"
+  },
+  {
+    "name": "拯救火箭",
+    "en_name": "save rocket",
+    "isvertial": true,
+    "path": "games/game_save_rocket/index.html"
   }
+
 ]
 
 
