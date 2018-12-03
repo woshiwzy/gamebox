@@ -18,21 +18,16 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
 
-public class GameListActivity extends Activity {
+public class GameListActivity extends BaseGameActivity {
 
 
     private ListView listViewGame;
-    private List<GameGson> gamelist;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_list);
         listViewGame = findViewById(R.id.listViewGame);
-
-        String gameJsons = AssertTool.getAssertStringContent(this, "games.json");
-
-        gamelist = parseString2List(gameJsons, GameGson.class);
 
         GameGsonAdapter gameGsonAdapter = new GameGsonAdapter(this, gamelist);
 
@@ -43,47 +38,10 @@ public class GameListActivity extends Activity {
                 gotoGameDetail(gamelist.get(position));
             }
         });
-    }
 
-    public void gotoGameDetail(GameGson game) {
-        Intent intent = new Intent();
-        intent.putExtra("game", game);
-        if (game.isIsvertial()) {
-            Tool.startActivity(this, GameVerticalActivity.class, intent);
-        } else {
-            Tool.startActivity(this, GameHoritalActivity.class, intent);
-        }
 
     }
 
 
-    public <T> List<T> parseString2List(String json, Class clazz) {
-        Type type = new ParameterizedTypeImpl(clazz);
-        List<T> list = new Gson().fromJson(json, type);
-        return list;
-    }
-
-    private class ParameterizedTypeImpl implements ParameterizedType {
-        Class clazz;
-
-        public ParameterizedTypeImpl(Class clz) {
-            clazz = clz;
-        }
-
-        @Override
-        public Type[] getActualTypeArguments() {
-            return new Type[]{clazz};
-        }
-
-        @Override
-        public Type getRawType() {
-            return List.class;
-        }
-
-        @Override
-        public Type getOwnerType() {
-            return null;
-        }
-    }
 
 }

@@ -1,18 +1,16 @@
-package com.yanzhenjie.andserver.sample.activity;
+package com.gamebox.activity;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.common.util.Tool;
-import com.gamebox.activity.GameListActivity;
-import com.gamebox.activity.GameVerticalActivity;
 import com.yanzhenjie.andserver.sample.R;
 import com.yanzhenjie.andserver.sample.ServerManager;
 import com.yanzhenjie.loading.dialog.LoadingDialog;
@@ -23,7 +21,7 @@ import java.util.List;
 /**
  * Created by Yan Zhenjie on 2018/6/9.
  */
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends BaseGameActivity implements View.OnClickListener {
 
     private ServerManager mServerManager;
 
@@ -35,12 +33,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private LoadingDialog mDialog;
     public static String mRootUrl;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         mBtnStart = findViewById(R.id.btn_start);
         mBtnStop = findViewById(R.id.btn_stop);
@@ -63,9 +62,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
 //                Tool.startActivity(MainActivity.this,GameVerticalActivity.class);
-                Tool.startActivity(MainActivity.this,GameListActivity.class);
+                Tool.startActivity(MainActivity.this, GameListActivity.class);
             }
         });
+
+
+        showGameLogo(R.drawable.ninjia);
+
+
+        mBtnStart.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                gotoNinjiaGame();
+
+            }
+        },3*1000);
+
+
+    }
+
+
+    private void gotoNinjiaGame() {
+        gotoGameDetail("忍者躲飞镖");
+    }
+
+    private void showGameLogo(int rid) {
+        findViewById(R.id.imageViewGameLogo).setBackgroundResource(rid);
+
     }
 
     @Override
@@ -118,6 +141,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             mRootUrl = null;
             mTvMessage.setText(R.string.server_ip_error);
+        }
+    }
+
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        if (intent != null) {//判断其他Activity启动本Activity时传递来的intent是否为空
+            //获取intent中对应Tag的布尔值
+            boolean isExist = intent.getBooleanExtra(EXIST, false);
+            //如果为真则退出本Activity
+            if (isExist) {
+                this.finish();
+            }
         }
     }
 

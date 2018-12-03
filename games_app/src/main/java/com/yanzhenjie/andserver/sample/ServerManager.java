@@ -20,7 +20,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 
-import com.yanzhenjie.andserver.sample.activity.MainActivity;
+import com.gamebox.activity.MainActivity;
 
 /**
  * Created by Yan Zhenjie on 2018/6/9.
