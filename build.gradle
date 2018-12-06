@@ -16,9 +16,11 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
         google()
+        jcenter()
         maven { url "https://jitpack.io" }
+//        maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }
+//        maven { url 'https://dl.google.com/dl/android/maven2' }
     }
 }
 

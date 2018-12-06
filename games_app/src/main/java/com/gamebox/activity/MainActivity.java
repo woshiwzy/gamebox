@@ -69,14 +69,13 @@ public class MainActivity extends BaseGameActivity implements View.OnClickListen
 
         showGameLogo(R.drawable.ninjia);
 
-
         mBtnStart.postDelayed(new Runnable() {
             @Override
             public void run() {
                 gotoNinjiaGame();
 
             }
-        },3*1000);
+        }, 3 * 1000);
 
 
     }
@@ -88,7 +87,12 @@ public class MainActivity extends BaseGameActivity implements View.OnClickListen
 
     private void showGameLogo(int rid) {
         findViewById(R.id.imageViewGameLogo).setBackgroundResource(rid);
-
+        findViewById(R.id.imageViewGameLogo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoNinjiaGame();
+            }
+        });
     }
 
     @Override

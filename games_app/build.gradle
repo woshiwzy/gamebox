@@ -44,4 +44,7 @@ dependencies {
     implementation project(':model_cretve')
     implementation 'com.github.lzyzsd:jsbridge:1.0.4'
     implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.facebook.android:audience-network-sdk:5.+'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+//    implementation "com.android.support:support-core-utils:27.0.2"
 }
