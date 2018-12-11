@@ -1,1 +1,1 @@
-include ':games_app', ':api', ':annotation', ':processor',':model_cretve',"games_app_demond"
+include ':games_app', ':api', ':annotation', ':processor',':model_cretve',"games_demond"
